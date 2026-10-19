@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arquitectura-title arquitectura-desc" id="arquitectura-root">
+<title id="arquitectura-title">Arquitectura de despliegue de SprintScrum</title>
+<desc id="arquitectura-desc">Diagrama de despliegue: el navegador llega por HTTPS a Traefik v3 en el VPS de iAgentek (Docker Swarm, un nodo), que enruta al portal web nginx y a la API FastAPI; la API encola trabajos en Redis 7 para el worker Celery, y ambos escriben en PostgreSQL 15 de Supabase maestría con RLS.</desc>
+<defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+      #arquitectura-root { --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #04202C;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace; }
+      #arquitectura-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #arquitectura-root .diagram-container { width: 100%; overflow-x: auto; }
+      #arquitectura-root .diagram-container { overflow-x: visible; }</style>
+<marker id="arquitectura-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="arquitectura-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="arquitectura-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+<marker id="arquitectura-arrow-open" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polyline points="0 0, 8 3, 0 6" fill="none" stroke="#5B7065" stroke-width="1.2"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<rect x="32" y="64" width="208" height="548" rx="8" fill="#04202c" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" fill-opacity="0.02" stroke-opacity="0.22"/><rect x="48" y="58" width="56" height="12" fill="#F7F8F7"/><text x="76" y="67" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">INTERNET</text>
+<rect x="264" y="64" width="760" height="548" rx="8" fill="#04202c" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" fill-opacity="0.02" stroke-opacity="0.22"/><rect x="280" y="58" width="320" height="12" fill="#F7F8F7"/><text x="440" y="67" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">VPS IAGENTEK · DOCKER SWARM · NODO ÚNICO · STACK SPRINTSCRUM</text>
+<rect x="1048" y="64" width="208" height="548" rx="8" fill="#04202c" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" fill-opacity="0.02" stroke-opacity="0.22"/><rect x="1064" y="58" width="100" height="12" fill="#F7F8F7"/><text x="1114" y="67" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">SUPABASE MAESTRÍA</text>
+<line x1="224" y1="300" x2="294" y2="300" stroke="#304040" stroke-width="1.2" marker-end="url(#arquitectura-arrow-link)"/>
+<path d="M 504,272 H 528 Q 536,272 536,264 V 160 Q 536,152 544,152 H 582" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arquitectura-arrow)"/>
+<line x1="504" y1="352" x2="582" y2="352" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arquitectura-arrow)"/>
+<line x1="792" y1="320" x2="838" y2="320" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arquitectura-arrow)"/>
+<line x1="920" y1="372" x2="920" y2="446" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arquitectura-arrow)"/>
+<path d="M 760,296 V 272 Q 760,264 768,264 H 1112 Q 1120,264 1120,272 V 294" fill="none" stroke="#304040" stroke-width="1.2" marker-end="url(#arquitectura-arrow-link)"/>
+<path d="M 1000,520 H 1144 Q 1152,520 1152,512 V 438" fill="none" stroke="#304040" stroke-width="1.2" marker-end="url(#arquitectura-arrow-link)"/>
+<rect x="230" y="280" width="60" height="12" rx="2" fill="#F7F8F7"/><text x="260" y="289" fill="#304040" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">HTTPS:443</text>
+<rect x="452" y="200" width="76" height="12" rx="2" fill="#F7F8F7"/><text x="490" y="209" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">HOST · :8080</text>
+<rect x="505" y="332" width="76" height="12" rx="2" fill="#F7F8F7"/><text x="543" y="341" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">/API · :8000</text>
+<rect x="793" y="300" width="44" height="12" rx="2" fill="#F7F8F7"/><text x="815" y="309" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">ENCOLA</text>
+<rect x="928" y="402" width="44" height="12" rx="2" fill="#F7F8F7"/><text x="950" y="411" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">BROKER</text>
+<rect x="992" y="244" width="88" height="12" rx="2" fill="#F7F8F7"/><text x="1036" y="253" fill="#304040" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">SQL · TLS:5432</text>
+<rect x="1046" y="500" width="52" height="12" rx="2" fill="#F7F8F7"/><text x="1072" y="509" fill="#304040" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">SQL:5432</text>
+<rect x="48" y="256" width="176" height="88" rx="6" fill="#F7F8F7"/>
+<rect x="48" y="256" width="176" height="88" rx="6" fill="#04202c" stroke="#04202c" stroke-width="1" stroke-dasharray="4,3" fill-opacity="0.03" stroke-opacity="0.35"/>
+<rect x="56" y="264" width="26" height="12" rx="2" fill="none" stroke="#5B7065" stroke-width="0.8"/><text x="69" y="273" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">EXT</text>
+<text x="136" y="296" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Navegador</text>
+<text x="136" y="312" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">sprintscrum.iagentek.com.mx</text>
+<rect x="296" y="248" width="208" height="144" rx="6" fill="#F7F8F7"/>
+<rect x="296" y="248" width="208" height="144" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="304" y="256" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="321" y="265" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">PROXY</text>
+<text x="400" y="288" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Traefik v3</text>
+<rect x="304" y="296" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="312" y="312" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">enrutador HTTPS</text>
+<text x="488" y="312" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">:443</text>
+<rect x="304" y="328" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="312" y="344" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Let's Encrypt</text>
+<text x="488" y="344" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">TLS</text>
+<rect x="304" y="360" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="312" y="376" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">middlewares</text>
+<text x="488" y="376" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">límite · CSRF</text>
+<rect x="584" y="96" width="208" height="112" rx="6" fill="#F7F8F7"/>
+<rect x="584" y="96" width="208" height="112" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="592" y="104" width="54" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="619" y="113" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SVC · web</text>
+<text x="688" y="136" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Portal web</text>
+<rect x="592" y="144" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="600" y="160" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">nginx sin privilegios</text>
+<text x="776" y="160" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">:8080</text>
+<rect x="592" y="176" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="600" y="192" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Angular 22 + Tailwind 4</text>
+<rect x="584" y="296" width="208" height="112" rx="6" fill="#F7F8F7"/>
+<rect x="584" y="296" width="208" height="112" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="592" y="304" width="54" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="619" y="313" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SVC · api</text>
+<text x="688" y="336" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">API</text>
+<rect x="592" y="344" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="600" y="360" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">FastAPI · uvicorn</text>
+<text x="776" y="360" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">:8000</text>
+<rect x="592" y="376" width="192" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="600" y="392" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">secreto Swarm</text>
+<text x="776" y="392" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">db_dsn_v1</text>
+<rect x="840" y="296" width="160" height="76" rx="6" fill="#F7F8F7"/>
+<rect x="840" y="296" width="160" height="76" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="848" y="304" width="64" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="880" y="313" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SVC · redis</text>
+<text x="920" y="336" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Redis 7</text>
+<rect x="848" y="344" width="144" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="856" y="360" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">broker + backend</text>
+<rect x="840" y="448" width="160" height="144" rx="6" fill="#F7F8F7"/>
+<rect x="840" y="448" width="160" height="144" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="848" y="456" width="68" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="882" y="465" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SVC · worker</text>
+<text x="920" y="488" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Worker Celery</text>
+<rect x="848" y="496" width="144" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="856" y="512" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">celery</text>
+<text x="984" y="512" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">5.6</text>
+<rect x="848" y="528" width="144" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="856" y="544" fill="#04202C" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">simular_sprint</text>
+<rect x="848" y="560" width="144" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="856" y="576" fill="#04202C" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">generar_entregable</text>
+<rect x="1064" y="296" width="176" height="140" rx="6" fill="#F7F8F7"/>
+<rect x="1064" y="296" width="176" height="140" rx="6" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<rect x="1072" y="304" width="44" height="12" rx="2" fill="#04202C"/><text x="1094" y="313" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">MANAGED</text>
+<text x="1152" y="336" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">PostgreSQL 15</text>
+<rect x="1072" y="344" width="160" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="1080" y="360" fill="#04202C" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">SprintScrum_*</text>
+<text x="1224" y="360" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">9 tablas</text>
+<rect x="1072" y="376" width="160" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="1080" y="392" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">RLS forzado</text>
+<text x="1224" y="392" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">todas</text>
+<rect x="1072" y="408" width="160" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="1080" y="424" fill="#04202C" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">sprintscrum_app</text>
+<text x="1224" y="424" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">rol</text>
+<line x1="32" y1="632" x2="1248" y2="632" stroke="#04202c" stroke-width="0.8" stroke-opacity="0.1"/><text x="32" y="660" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<line x1="128" y1="657" x2="156" y2="657" stroke="#304040" stroke-width="1.2" marker-end="url(#arquitectura-arrow-link)"/>
+<text x="168" y="661" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Cruza un límite de zona</text>
+<line x1="340" y1="657" x2="368" y2="657" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arquitectura-arrow)"/>
+<text x="380" y="661" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Dentro del stack</text>
+<rect x="520" y="649" width="40" height="16" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/>
+<text x="572" y="661" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Artefacto desplegado</text>
+<rect x="724" y="649" width="28" height="16" rx="4" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<text x="764" y="661" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Fuente única de datos (compartida)</text>
+<text x="32" y="696" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">REDES OVERLAY</text>
+<text x="128" y="696" fill="#304040" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">iagenteknet: traefik · web · api</text>
+<text x="400" y="696" fill="#304040" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">interna: api · redis · worker</text>
+<text x="656" y="696" fill="#304040" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">supabase_maestria_internal: api · worker → PostgreSQL</text>
+</svg>

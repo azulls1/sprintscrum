@@ -1,0 +1,68 @@
+# generated: 10-18-2026 20:00
+# project: SprintScrum · AgendaFácil
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts
+#
+# Estado del desarrollo del PORTAL (capa B). No es el sprint de AgendaFácil (capa A),
+# que está planeado y no ejecutado: sus historias HU-01…HU-08 son contenido, no trabajo.
+# Planificación: specs/001-portal-sprintscrum/ (spec-kit) · Épicas: _bmad-output/planning-artifacts/epics.md
+#
+# STATUS DEFINITIONS:
+# Epic: backlog | in-progress | done
+# Story: backlog | ready-for-dev | in-progress | review | done
+# Retrospective: optional | done
+
+generated: 10-18-2026 20:00
+last_updated: 10-18-2026 23:00
+project: SprintScrum · AgendaFácil
+project_key: NOKEY
+tracking_system: file-system
+story_location: "_bmad-output/implementation-artifacts"
+
+development_status:
+  epic-1: done
+  1-1-esquema-y-seguridad: done
+  1-2-cargador-de-contenido: done
+  1-3-api-base-y-shell: done
+  epic-1-retrospective: optional
+
+  epic-2: done
+  2-1-apartados-c1-c5-y-roles: done
+  2-2-complementos-rotulados: done
+  epic-2-retrospective: optional
+
+  epic-3: done
+  3-1-kpi-calculados: done
+  3-2-cumplimiento-de-la-rubrica: done
+  epic-3-retrospective: optional
+
+  epic-4: done
+  4-1-endpoint-sprint-plan-y-burndown: done
+  4-2-cuatro-vistas: done
+  epic-4-retrospective: optional
+
+  epic-5: done
+  5-1-modelo-monte-carlo-y-worker: done
+  5-2-pagina-simulacion: done
+  epic-5-retrospective: optional
+
+  epic-6: done
+  6-1-catalogo-y-zip-con-manifiesto: done
+  6-2-pagina-metodologia: done
+  epic-6-retrospective: optional
+
+  epic-7: done
+  7-1-stack-y-traefik: done
+  7-2-deploy-sh-reproducible: done
+  7-3-accesibilidad-y-responsive: done
+  epic-7-retrospective: optional
+
+  epic-8: done
+  8-1-movimiento-accesible: done
+  8-2-planning-poker: done
+  8-3-sprint-backlog-animado: done
+  8-4-figuras-y-diagramas-incrustados: done
+  8-5-figuras-nuevas-en-las-paginas: done
+  8-6-documento-final: done
+  epic-8-retrospective: optional

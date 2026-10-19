@@ -1,0 +1,23 @@
+# Entornos y dependencias
+.venv/
+**/.venv/
+node_modules/
+**/node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Builds
+frontend/dist/
+frontend/.angular/
+# Secretos (nunca al repo)
+*.env
+.env*
+# Sistema
+.DS_Store
+frontend/public/figuras
+
+# Configuración de despliegue con datos del servidor (nunca al repo)
+deploy/.env.deploy
+
+.specify/*
+!.specify/memory/

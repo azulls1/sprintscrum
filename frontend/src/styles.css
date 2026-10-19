@@ -1,0 +1,123 @@
+@import "tailwindcss";
+/* Forest Design System (el mismo kit que portal-act3, etiqmorfsintac y designsystem de iAgentek) */
+@import "./forest/forest.css";
+
+/* ═══════════════════════════════════════════════════════════
+   Tokens de la app mapeados a la paleta Forest.
+   Reglas heredadas del Forest DS: solo modo claro, fondo #F7F8F7,
+   primario forest #04202C, Sora (títulos) · DM Sans (texto) · JetBrains Mono (datos).
+   ═══════════════════════════════════════════════════════════ */
+@theme {
+  --color-fondo: #F7F8F7;
+  --color-panel: #FFFFFF;
+  --color-borde: #DFE4E0;
+  --color-texto: #04202C;
+  --color-tenue: #5B7065;
+  --color-acento: #04202C;
+  --color-acento-suave: #EFF2F0;
+  --color-bien: #059669;
+  --color-bien-suave: #ECFDF5;
+  --color-mal: #DC2626;
+  --color-mal-suave: #FEF2F2;
+  --color-aviso: #D97706;
+  --color-aviso-suave: #FFFBEB;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Sora", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer components {
+  .panel {
+    @apply min-w-0 rounded-xl border bg-panel p-5;
+    border-color: var(--color-border-subtle);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px -2px rgba(0,0,0,0.04);
+    transition: box-shadow 0.25s var(--ease-apple);
+  }
+  .panel:hover { box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 8px 20px -4px rgba(4,32,44,0.1); }
+  .titulo { @apply font-display text-2xl font-semibold tracking-tight text-forest; }
+  .subtitulo { @apply text-sm text-tenue; }
+  .seccion { @apply mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss; }
+  .etiqueta { @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium; }
+  .tabla { @apply w-full text-sm; }
+  .tabla th { @apply border-b border-borde px-3 py-2 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-tenue; }
+  .tabla td { @apply border-b border-borde/60 px-3 py-2 align-top; }
+  .boton {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-4 py-2 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-50;
+    transition: all 150ms var(--ease-apple);
+  }
+  .boton:hover:not(:disabled) { background-color: #1A3036; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(4,32,44,0.25); }
+  .boton:focus-visible { outline: none; box-shadow: 0 0 0 2px #F7F8F7, 0 0 0 4px #04202C; }
+  .campo {
+    @apply w-full rounded-lg border border-borde bg-white px-3 py-2 text-sm text-forest outline-none placeholder:text-moss;
+    transition: all 150ms var(--ease-apple);
+  }
+  .campo:focus { border-color: #04202C; box-shadow: 0 0 0 2px rgba(4,32,44,0.15); }
+}
+
+code, .mono { font-family: var(--font-mono); font-size: .85em; }
+h1, h2, h3 { font-family: var(--font-display); }
+
+/* ─── Movimiento ─── */
+/* Cada página entra con un desplazamiento suave; las cuadrículas marcadas aparecen escalonadas. */
+router-outlet + * { display: block; }
+.stagger-children > * { animation: fadeInUp var(--duration-slow) var(--ease-apple) backwards; }
+.stagger-children > *:nth-child(n+9) { animation-delay: 540ms; }
+@keyframes flotar { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(18px, -14px); } }
+.orbe { animation: flotar 12s ease-in-out infinite; }
+.orbe--lento { animation-duration: 18s; animation-direction: reverse; }
+@keyframes aparecerToken { from { opacity: 0; transform: translateY(6px) scale(.9); } to { opacity: 1; transform: none; } }
+.token-entra { animation: aparecerToken 280ms var(--ease-spring) backwards; }
+@keyframes pulsoCapa { 0%, 100% { background-color: #EFF2F0; } 50% { background-color: #04202C; color: #fff; } }
+.capa-activa { animation: pulsoCapa 700ms ease-in-out; }
+/* ─── Transición entre páginas (View Transitions) ─── */
+::view-transition-old(root) { animation: 220ms var(--ease-apple) both salirPagina; }
+::view-transition-new(root) { animation: 420ms var(--ease-apple) 60ms both entrarPagina; }
+@keyframes salirPagina { to { opacity: 0; transform: translateY(-8px) scale(.995); filter: blur(2px); } }
+@keyframes entrarPagina { from { opacity: 0; transform: translateY(14px); filter: blur(3px); } }
+/* Tarjetas del Kanban: cada una tiene su view-transition-name y «vuela» a su columna */
+::view-transition-group(*.tarjeta) { animation-duration: 650ms; animation-timing-function: var(--ease-spring); }
+
+/* ─── Aparición al hacer scroll ─── */
+.revelar { opacity: 0; transform: translateY(22px); transition: opacity 700ms var(--ease-apple), transform 700ms var(--ease-apple); }
+.revelar--visible { opacity: 1; transform: none; }
+
+/* ─── Trazos que se dibujan (gráficas) ─── */
+.trazo { stroke-dasharray: 1; stroke-dashoffset: 1; animation: dibujar 1.4s var(--ease-apple) forwards; }
+.trazo--2 { animation-delay: .35s; }
+.trazo--3 { animation-delay: .7s; }
+@keyframes dibujar { to { stroke-dashoffset: 0; } }
+.punto-pop { transform-box: fill-box; transform-origin: center; animation: pop 420ms var(--ease-spring) backwards; }
+@keyframes pop { from { transform: scale(0); } }
+.banda-entra { animation: fadeIn 900ms var(--ease-apple) .5s backwards; }
+.barra-crece { transform-origin: bottom; animation: crecer 800ms var(--ease-spring) backwards; }
+@keyframes crecer { from { transform: scaleY(0); } }
+
+/* ─── Cartas de planning poker ─── */
+.carta { perspective: 900px; }
+.carta__cara { transition: transform 700ms var(--ease-spring); transform-style: preserve-3d; }
+.carta--volteada .carta__cara { transform: rotateY(180deg); }
+.carta__frente, .carta__dorso { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.carta__dorso { transform: rotateY(180deg); }
+.carta-elegible { transition: transform 200ms var(--ease-spring), box-shadow 200ms; }
+.carta-elegible:hover:not(:disabled), .carta-elegible:focus-visible { transform: translateY(-8px) rotate(-2deg); box-shadow: 0 12px 24px -8px rgba(4,32,44,.35); }
+
+/* ─── Detalles juguetones ─── */
+@keyframes ondear { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+.ondea:hover { animation: ondear 600ms ease-in-out; }
+@keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+.latido { animation: latido 2.4s ease-in-out infinite; }
+@keyframes brillo { from { background-position: -200% 0; } to { background-position: 200% 0; } }
+.brillo { background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%); background-size: 200% 100%; animation: brillo 3.5s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar { opacity: 1; transform: none; }
+  .trazo { stroke-dasharray: none; stroke-dashoffset: 0; }
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
+}
+
+/* Anillo de cumplimiento y barras de ocupación que se llenan */
+.anillo-llena { stroke-dashoffset: 100; animation: llenarAnillo 1.3s var(--ease-apple) .2s forwards; }
+@keyframes llenarAnillo { to { stroke-dashoffset: 0; } }
+.barra-ancho { transform-origin: left; animation: anchoCrece 1s var(--ease-apple) .3s backwards; }
+@keyframes anchoCrece { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .anillo-llena { stroke-dashoffset: 0; } }

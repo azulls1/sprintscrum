@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciclo Scrum del sprint de AgendaFácil</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #04202C;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; }
+.frame { max-width: 856px; width: 100%; }
+.diagram-container { width: 100%; overflow-x: auto; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+h1 { font-family: var(--font-title); font-size: clamp(1.4rem, 2vw + 0.75rem, 1.9rem); font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+svg { width: 100%; min-width: 856px; display: block; }
+@media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+</style>
+</head>
+<body>
+<div class="frame">
+<p class="eyebrow">Loop · diagrama Forest</p>
+<h1>Ciclo Scrum del sprint de AgendaFácil</h1>
+<div class="diagram-container">
+<svg viewBox="0 0 856 756" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ciclo-scrum-title ciclo-scrum-desc">
+<title id="ciclo-scrum-title">Ciclo Scrum del sprint de AgendaFácil</title>
+<desc id="ciclo-scrum-desc">Ciclo Scrum en el sentido de las agujas del reloj: product backlog, sprint planning, sprint backlog, daily scrum, incremento, sprint review y retrospectiva, que vuelve al backlog; cada evento se inspecciona contra el objetivo del sprint.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+<marker id="arrow-open" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polyline points="0 0, 8 3, 0 6" fill="none" stroke="#5B7065" stroke-width="1.2"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<path d="M 520.000,121.103 A 256 256 0 0 1 596.426,167.208" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 649.703,232.000 A 256 256 0 0 1 682.982,382.805" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 668.400,448.000 A 256 256 0 0 1 588.736,559.249" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 448.000,615.218 A 256 256 0 0 1 409.197,615.309" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 268.200,560.000 A 256 256 0 0 1 188.015,449.126" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 173.127,384.000 A 256 256 0 0 1 205.700,233.041" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 258.672,168.000 A 256 256 0 0 1 334.881,121.536" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="428.000" y1="136.000" x2="428.000" y2="298.000" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="588.000" y1="232.000" x2="502.685" y2="300.252" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="584.000" y1="395.226" x2="553.853" y2="388.418" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="524.552" y1="560.000" x2="457.643" y2="421.403" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="331.448" y1="560.000" x2="398.357" y2="421.403" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="272.000" y1="395.226" x2="302.147" y2="388.418" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<line x1="268.000" y1="232.000" x2="353.315" y2="300.252" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<rect x="256.321" y="364.773" width="52" height="12" rx="2" fill="#F7F8F7"/><text x="282.321" y="373.773" fill="#304040" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.06em">FEEDBACK</text>
+<rect x="305.197" y="236.951" width="48" height="12" rx="2" fill="#F7F8F7"/><text x="329.197" y="245.951" fill="#304040" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.06em">MEJORAS</text>
+<rect x="336" y="72" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="336" y="72" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="348" y="90" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">01</text>
+<text x="428" y="108" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Product backlog</text>
+<text x="428" y="125" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">8 HU · 50 pts</text>
+<rect x="536" y="168" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="536" y="168" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="548" y="186" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">02</text>
+<text x="628" y="204" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Sprint planning</text>
+<text x="628" y="221" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">lun 9:00 · 2 h</text>
+<rect x="584" y="384" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="584" y="384" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="596" y="402" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">03</text>
+<text x="676" y="420" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Sprint backlog</text>
+<text x="676" y="437" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">15 tareas · 51 h</text>
+<rect x="448" y="560" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="448" y="560" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="460" y="578" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">04</text>
+<text x="540" y="596" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Daily scrum</text>
+<text x="540" y="613" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">mar–vie 9:00 · 15 min</text>
+<rect x="224" y="560" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="224" y="560" width="184" height="64" rx="6" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<text x="236" y="578" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">05</text>
+<text x="316" y="596" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Incremento</text>
+<text x="316" y="613" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">HU-01 a HU-03 · 16 pts</text>
+<rect x="88" y="384" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="88" y="384" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="100" y="402" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">06</text>
+<text x="180" y="420" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Sprint review</text>
+<text x="180" y="437" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">vie 15:00 · 1 h</text>
+<rect x="136" y="168" width="184" height="64" rx="6" fill="#F7F8F7"/>
+<rect x="136" y="168" width="184" height="64" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<text x="148" y="186" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.1em">07</text>
+<text x="228" y="204" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Retrospectiva</text>
+<text x="228" y="221" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">vie 16:30 · 1 h</text>
+<rect x="308" y="304" width="240" height="112" rx="8" fill="#04202C"/>
+<text x="428" y="338" fill="#9EADA3" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">OBJETIVO DEL SPRINT</text>
+<text x="428" y="362" fill="#FFFFFF" font-size="15" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Reservar una cita</text>
+<text x="428" y="380" fill="#FFFFFF" font-size="15" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">en línea</text>
+<text x="428" y="400" fill="#9EADA3" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">sprint de 5 días</text>
+<line x1="32" y1="704" x2="824" y2="704" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/><text x="32" y="732" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<path d="M 120,734 A 40 40 0 0 1 150,726" fill="none" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="160" y="733" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Flujo del sprint</text>
+<line x1="300" y1="729" x2="330" y2="729" stroke="#304040" stroke-width="1" stroke-dasharray="5,4" opacity="0.7" marker-end="url(#arrow-link)"/>
+<text x="340" y="733" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Inspección y adaptación</text>
+<rect x="520" y="720" width="28" height="18" rx="3" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<text x="556" y="733" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Entregable</text>
+<rect x="660" y="720" width="28" height="18" rx="3" fill="#04202C"/>
+<text x="696" y="733" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Meta compartida</text>
+</svg>
+</div>
+</div>
+</body>
+</html>

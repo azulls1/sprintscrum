@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recorrido del paciente con AgendaFácil</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #04202C;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; }
+.frame { max-width: 1280px; width: 100%; }
+.diagram-container { width: 100%; overflow-x: auto; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+h1 { font-family: var(--font-title); font-size: clamp(1.4rem, 2vw + 0.75rem, 1.9rem); font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+svg { width: 100%; min-width: 1280px; display: block; }
+@media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+</style>
+</head>
+<body>
+<div class="frame">
+<p class="eyebrow">User journey · diagrama Forest</p>
+<h1>Recorrido del paciente con AgendaFácil</h1>
+<div class="diagram-container">
+<svg viewBox="0 0 1280 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="recorrido-paciente-title recorrido-paciente-desc">
+<title id="recorrido-paciente-title">Recorrido del paciente con AgendaFácil</title>
+<desc id="recorrido-paciente-desc">Mapa del recorrido de un paciente de la Clínica Dental Sonrisa Plena: hoy llama o escribe por WhatsApp, espera la confirmación y olvida la cita (25 % de inasistencias); con AgendaFácil se registra (HU-01), ve la disponibilidad (HU-02), reserva y recibe el correo (HU-03) en el Sprint 1, y después recibe el recordatorio por WhatsApp (HU-05), cancela o reprograma (HU-06) y asiste, con la curva de ánimo y la meta de menos de 10 % de inasistencias y 2 h diarias liberadas en recepción.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+<marker id="arrow-open" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polyline points="0 0, 8 3, 0 6" fill="none" stroke="#5B7065" stroke-width="1.2"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<rect x="24" y="40" width="1232" height="88" rx="6" fill="rgba(4,32,44,0.025)"/>
+<text x="36" y="62" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">ESCENARIO</text>
+<text x="36" y="86" fill="#04202C" font-size="18" font-family="'Sora', system-ui, sans-serif" font-weight="600">Hoy</text>
+<text x="36" y="104" fill="#304040" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">SIN AGENDAFÁCIL</text>
+<line x1="404" y1="84" x2="434" y2="84" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="688" y1="84" x2="718" y2="84" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="972" y1="84" x2="1002" y2="84" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="152" y="56" width="252" height="56" rx="6" fill="#F7F8F7"/>
+<rect x="152" y="56" width="252" height="56" rx="6" fill="rgba(4,32,44,0.03)" stroke="rgba(4,32,44,0.35)" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="164" y="80" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Llama o escribe por WhatsApp</text>
+<text x="164" y="98" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace">recepción agenda a mano</text>
+<rect x="436" y="56" width="252" height="56" rx="6" fill="#F7F8F7"/>
+<rect x="436" y="56" width="252" height="56" rx="6" fill="rgba(4,32,44,0.03)" stroke="rgba(4,32,44,0.35)" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="448" y="80" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Espera a que le confirmen</text>
+<text x="448" y="98" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace">respuesta manual</text>
+<rect x="720" y="56" width="252" height="56" rx="6" fill="#F7F8F7"/>
+<rect x="720" y="56" width="252" height="56" rx="6" fill="rgba(4,32,44,0.03)" stroke="rgba(4,32,44,0.35)" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="732" y="80" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Olvida la cita</text>
+<text x="732" y="98" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace">sin recordatorio</text>
+<rect x="1004" y="56" width="252" height="56" rx="6" fill="#F7F8F7"/>
+<rect x="1004" y="56" width="252" height="56" rx="6" fill="rgba(220,38,38,0.04)" stroke="#DC2626" stroke-width="1.2"/>
+<text x="1016" y="80" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">No llega a la consulta</text>
+<text x="1016" y="98" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace">horario perdido</text>
+<rect x="1148" y="88" width="96" height="12" rx="2" fill="#DC2626"/><text x="1196" y="97" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">25 % INASISTENCIAS</text>
+<rect x="144" y="148" width="556" height="468" rx="6" fill="rgba(5,150,105,0.06)"/>
+<rect x="708" y="148" width="548" height="468" rx="6" fill="rgba(4,32,44,0.02)"/>
+<text x="156" y="166" fill="#059669" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" letter-spacing="0.08em">INCREMENTO DEL SPRINT 1 · HU-01 A HU-03 · 16 PTS</text>
+<text x="720" y="166" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" letter-spacing="0.08em">PRODUCT BACKLOG · SPRINTS SIGUIENTES</text>
+<text x="36" y="194" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">ESCENARIO</text>
+<text x="36" y="216" fill="#04202C" font-size="16" font-family="'Sora', system-ui, sans-serif" font-weight="600">Con</text>
+<text x="36" y="236" fill="#04202C" font-size="16" font-family="'Sora', system-ui, sans-serif" font-weight="600">AgendaFácil</text>
+<text x="234" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 1</text>
+<text x="234" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Registrarse</text>
+<rect x="189" y="220" width="34" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="206" y="229" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-01</text><rect x="229" y="220" width="50" height="12" rx="2" fill="#059669"/><text x="254" y="229" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="422" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 2</text>
+<text x="422" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Ver disponibilidad</text>
+<rect x="377" y="220" width="34" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="394" y="229" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-02</text><rect x="417" y="220" width="50" height="12" rx="2" fill="#059669"/><text x="442" y="229" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="610" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 3</text>
+<text x="610" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Reservar la cita</text>
+<rect x="565" y="220" width="34" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="582" y="229" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-03</text><rect x="605" y="220" width="50" height="12" rx="2" fill="#059669"/><text x="630" y="229" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="798" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 4</text>
+<text x="798" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Recibir recordatorio</text>
+<rect x="756" y="220" width="34" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="773" y="229" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-05</text><rect x="796" y="220" width="44" height="12" rx="2" fill="transparent" stroke="#5B7065" stroke-width="0.8"/><text x="818" y="229" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="986" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 5</text>
+<text x="986" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Cancelar o reprogramar</text>
+<rect x="944" y="220" width="34" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="961" y="229" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-06</text><rect x="984" y="220" width="44" height="12" rx="2" fill="transparent" stroke="#5B7065" stroke-width="0.8"/><text x="1006" y="229" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="1174" y="190" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">PASO 6</text>
+<text x="1174" y="210" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Asistir a la cita</text>
+<rect x="1147" y="220" width="54" height="12" rx="2" fill="transparent" stroke="#5B7065" stroke-width="0.8"/><text x="1174" y="229" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">RESULTADO</text>
+<text x="32" y="272" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">ÁNIMO</text>
+<line x1="152" y1="268" x2="1256" y2="268" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="140" y="271" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.1em">ALTO</text>
+<line x1="152" y1="340" x2="1256" y2="340" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="140" y="343" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.1em">NEUTRO</text>
+<line x1="152" y1="412" x2="1256" y2="412" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="140" y="415" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.1em">BAJO</text>
+<path d="M 234,340 C 328,340 328,304 422,304" fill="none" stroke="#5B7065" stroke-width="1.5"/>
+<path d="M 422,304 C 516,304 516,268 610,268" fill="none" stroke="#5B7065" stroke-width="1.5"/>
+<path d="M 610,268 C 704,268 704,304 798,304" fill="none" stroke="#5B7065" stroke-width="1.5"/>
+<path d="M 798,304 C 892,304 892,376 986,376" fill="none" stroke="#D97706" stroke-width="2"/>
+<path d="M 986,376 C 1080,376 1080,268 1174,268" fill="none" stroke="#5B7065" stroke-width="1.5"/>
+<circle cx="234" cy="340" r="5" fill="#5B7065" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="234" y="360" fill="#304040" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">trámite único</text>
+<circle cx="422" cy="304" r="5" fill="#5B7065" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="422" y="324" fill="#304040" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">sin llamar</text>
+<circle cx="610" cy="268" r="5" fill="#5B7065" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="610" y="288" fill="#304040" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">constancia</text>
+<circle cx="798" cy="304" r="5" fill="#5B7065" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="798" y="324" fill="#304040" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">tranquilidad</text>
+<circle cx="986" cy="376" r="5" fill="#D97706" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="986" y="396" fill="#D97706" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">imprevisto</text>
+<circle cx="1174" cy="268" r="5" fill="#5B7065" stroke="#F7F8F7" stroke-width="1.5"/>
+<text x="1174" y="288" fill="#304040" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">atendido</text>
+<line x1="32" y1="444" x2="1256" y2="444" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<line x1="32" y1="532" x2="1256" y2="532" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<line x1="32" y1="568" x2="1256" y2="568" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="32" y="468" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">ACCIONES</text>
+<text x="32" y="554" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">CONTACTO</text>
+<text x="32" y="590" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">CRITERIO</text>
+<text x="234" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Captura nombre,</text><text x="234" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">teléfono y correo</text>
+<text x="234" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">web responsive (móvil)</text>
+<text x="234" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">Teléfono de 10 dígitos y</text><text x="234" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">correo único validados</text>
+<text x="422" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Elige consultorio,</text><text x="422" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">dentista y día</text>
+<text x="422" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">calendario de la web</text>
+<text x="422" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">Solo horarios libres de</text><text x="422" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">30 min; responde en &lt; 1 s</text>
+<text x="610" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Reserva un horario</text><text x="610" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">y recibe el correo</text>
+<text x="610" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">web + correo &lt; 1 min</text>
+<text x="610" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">Sin doble reserva: unicidad</text><text x="610" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">en la base de datos</text>
+<text x="798" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Recibe el aviso por</text><text x="798" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">WhatsApp 24 h antes</text>
+<text x="798" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">WhatsApp</text>
+<text x="798" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">Llega 24 h antes</text><text x="798" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">de la cita</text>
+<text x="986" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Cancela o cambia la</text><text x="986" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">cita desde un enlace</text>
+<text x="986" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">enlace del recordatorio</text>
+<text x="986" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">El horario vuelve</text><text x="986" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">a quedar libre</text>
+<text x="1174" y="468" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Llega a tiempo</text><text x="1174" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">a su consulta</text>
+<text x="1174" y="554" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">consultorio · recepción</text>
+<text x="1174" y="590" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">Cuenta para la meta</text><text x="1174" y="605" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif" text-anchor="middle">de &lt; 10 % inasistencias</text>
+<rect x="924" y="504" width="124" height="16" rx="2" fill="rgba(217,119,6,0.06)" stroke="#D97706" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="986" y="515" fill="#D97706" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">FRICCIÓN: IMPREVISTO</text>
+<text x="32" y="660" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">META</text>
+<text x="32" y="674" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">6 MESES</text>
+<rect x="152" y="636" width="1104" height="68" rx="8" fill="#04202C"/>
+<text x="172" y="658" fill="#9EADA3" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">INASISTENCIAS</text>
+<text x="172" y="686" fill="#FFFFFF" font-size="20" font-family="'Sora', system-ui, sans-serif" font-weight="600">25 % → menos de 10 %</text>
+<line x1="452" y1="652" x2="452" y2="688" stroke="#9EADA3" stroke-width="0.8" opacity="0.5"/>
+<text x="476" y="658" fill="#9EADA3" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">RECEPCIÓN</text>
+<text x="476" y="686" fill="#FFFFFF" font-size="20" font-family="'Sora', system-ui, sans-serif" font-weight="600">2 h diarias liberadas</text>
+<line x1="752" y1="652" x2="752" y2="688" stroke="#9EADA3" stroke-width="0.8" opacity="0.5"/>
+<text x="776" y="664" fill="#DFE4E0" font-size="11" font-family="'DM Sans', system-ui, sans-serif">El Sprint 1 pone la reserva en línea (HU-01 a HU-03);</text>
+<text x="776" y="682" fill="#DFE4E0" font-size="11" font-family="'DM Sans', system-ui, sans-serif">el recordatorio y el enlace (HU-05, HU-06) atacan las inasistencias.</text>
+<line x1="32" y1="728" x2="1248" y2="728" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/><text x="32" y="756" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<path d="M 128,758 C 142,758 142,748 156,748" fill="none" stroke="#5B7065" stroke-width="1.5"/>
+<text x="166" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Ánimo del paciente</text>
+<circle cx="306" cy="753" r="5" fill="#D97706"/>
+<text x="320" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Punto más bajo</text>
+<rect x="440" y="746" width="28" height="14" rx="2" fill="rgba(217,119,6,0.06)" stroke="#D97706" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="478" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Fricción</text>
+<rect x="548" y="747" width="50" height="12" rx="2" fill="#059669"/><text x="573" y="756" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="610" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Entregado en el Sprint 1</text>
+<rect x="772" y="747" width="44" height="12" rx="2" fill="transparent" stroke="#5B7065" stroke-width="0.8"/><text x="794" y="756" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="830" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Sprints siguientes</text>
+<rect x="960" y="744" width="28" height="18" rx="3" fill="rgba(4,32,44,0.03)" stroke="rgba(4,32,44,0.35)" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="998" y="757" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Proceso manual de hoy</text>
+</svg>
+</div>
+</div>
+</body>
+</html>

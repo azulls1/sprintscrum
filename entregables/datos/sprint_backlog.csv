@@ -1,0 +1,16 @@
+﻿n,historia,tarea,responsable,horas,dia_inicio,dia_fin,tipo,depende_de
+1,HU-01,Definir los criterios de aceptación y los datos obligatorios del registro,Adonai Hernández,1,1,1,analisis,
+2,HU-01,Diseñar la tabla de pacientes en la base de datos,Mauricio Alvarez,2,1,1,backend,1
+3,HU-01,Programar la API de registro con validación de teléfono y correo,Mauricio Alvarez,4,1,2,backend,1 2
+4,HU-01,Construir la pantalla de registro responsive,Diego Nájera,4,1,1,frontend,1
+5,HU-01,Probar el registro (casos válidos e inválidos),Cesar Martinez,2,2,2,pruebas,3 4
+6,HU-02,Modelar los horarios por dentista y consultorio,Mauricio Alvarez,3,2,2,backend,
+7,HU-02,Programar la API de consulta de disponibilidad,Mauricio Alvarez,5,3,3,backend,6
+8,HU-02,Construir el calendario de disponibilidad en la interfaz,Diego Nájera,6,2,3,frontend,
+9,HU-02,Cargar los horarios de prueba de la clínica,Adonai Hernández,2,2,2,analisis,6
+10,HU-02,"Probar la disponibilidad (días llenos, festivos, horario de comida)",Cesar Martinez,2,4,4,pruebas,7 8 9
+11,HU-03,Programar la API de reserva que impida la doble reserva,Mauricio Alvarez,6,4,4,backend,3 7
+12,HU-03,Configurar el correo de confirmación de la cita,Mauricio Alvarez,3,5,5,backend,11
+13,HU-03,Construir el flujo de reserva y la pantalla de confirmación,Diego Nájera,6,3,4,frontend,8
+14,HU-03,"Probar de punta a punta el registro, la consulta y la reserva",Cesar Martinez,4,5,5,pruebas,5 10 11 13
+15,HU-03,Validar el incremento con la clínica en la sprint review,Adonai Hernández,1,5,5,validacion,12 14

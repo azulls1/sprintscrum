@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 528" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="estados-cita-title estados-cita-desc" id="estados-cita-root">
+<title id="estados-cita-title">Estados de una cita en AgendaFácil</title>
+<desc id="estados-cita-desc">Máquina de estados de una cita: un horario libre pasa a reservada (HU-03, la restricción de unicidad rechaza una segunda reserva simultánea), a confirmada por correo y, en sprints siguientes, a recordada por WhatsApp (HU-05), y termina en asistida, inasistencia o cancelada o reprogramada (HU-06), que libera el horario; las transiciones del Sprint 1 van en verde.</desc>
+<defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+      #estados-cita-root { --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #04202C;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace; }
+      #estados-cita-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #estados-cita-root .diagram-container { width: 100%; overflow-x: auto; }
+      #estados-cita-root .diagram-container { overflow-x: visible; }</style>
+<marker id="estados-cita-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="estados-cita-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="estados-cita-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+<marker id="estados-cita-arrow-open" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polyline points="0 0, 8 3, 0 6" fill="none" stroke="#5B7065" stroke-width="1.2"/></marker>
+<marker id="estados-cita-arrow-ok" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#059669"/></marker>
+<marker id="estados-cita-arrow-err" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#DC2626"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<rect x="24" y="72" width="768" height="180" rx="8" fill="#059669" fill-opacity="0.06"/>
+<text x="40" y="92" fill="#059669" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" letter-spacing="0.08em">SPRINT 1 · HU-02 Y HU-03</text>
+<circle cx="40" cy="188" r="6" fill="#04202C"/>
+<line x1="46" y1="188.0" x2="70" y2="188.0" stroke="#059669" stroke-width="1.2" marker-end="url(#estados-cita-arrow-ok)"/>
+<line x1="240" y1="188.0" x2="334" y2="188.0" stroke="#059669" stroke-width="1.2" marker-end="url(#estados-cita-arrow-ok)"/>
+<line x1="504" y1="188.0" x2="598" y2="188.0" stroke="#059669" stroke-width="1.2" marker-end="url(#estados-cita-arrow-ok)"/>
+<line x1="768" y1="188.0" x2="862" y2="188.0" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<path d="M 392,152 V 128 Q 392,120 400,120 H 440 Q 448,120 448,128 V 150" fill="none" stroke="#DC2626" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#estados-cita-arrow-err)"/>
+<path d="M 1032,188 H 1160 Q 1168,188 1168,196 V 342" fill="none" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<line x1="984" y1="224" x2="984" y2="342" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<path d="M 880,224 V 372 Q 880,380 872,380 H 778" fill="none" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<line x1="684" y1="224" x2="684" y2="342" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<path d="M 560,380 H 164 Q 156,380 156,372 V 226" fill="none" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<rect x="248" y="168" width="80" height="12" rx="2" fill="#F7F8F7"/><text x="288" y="177" fill="#059669" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">RESERVA HU-03</text>
+<rect x="507" y="168" width="88" height="12" rx="2" fill="#F7F8F7"/><text x="551" y="177" fill="#059669" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">CORREO &lt; 1 MIN</text>
+<rect x="775" y="168" width="80" height="12" rx="2" fill="#F7F8F7"/><text x="815" y="177" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">WHATSAPP 24 H</text>
+<rect x="390" y="100" width="60" height="12" rx="2" fill="#F7F8F7"/><text x="420" y="109" fill="#DC2626" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">RECHAZADA</text>
+<rect x="1176" y="274" width="44" height="12" rx="2" fill="#F7F8F7"/><text x="1198" y="283" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">ASISTE</text>
+<rect x="992" y="274" width="52" height="12" rx="2" fill="#F7F8F7"/><text x="1018" y="283" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO LLEGA</text>
+<rect x="836" y="274" width="36" height="12" rx="2" fill="#F7F8F7"/><text x="854" y="283" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">HU-06</text>
+<rect x="640" y="274" width="36" height="12" rx="2" fill="#F7F8F7"/><text x="658" y="283" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">HU-06</text>
+<rect x="316" y="388" width="88" height="12" rx="2" fill="#F7F8F7"/><text x="360" y="397" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">LIBERA HORARIO</text>
+<text x="476" y="112" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Restricción de unicidad en la base de datos:</text>
+<text x="476" y="127" fill="#304040" font-size="11" font-family="'DM Sans', system-ui, sans-serif">de dos reservas simultáneas solo una se confirma.</text>
+<rect x="72" y="152" width="168" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="72" y="152" width="168" height="72" rx="8" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="82" y="160" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="99" y="169" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-02</text>
+<rect x="122" y="160" width="50" height="12" rx="2" fill="#059669"/><text x="147" y="169" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="156" y="196" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Horario libre</text>
+<text x="156" y="213" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">bloque de 30 min</text>
+<rect x="336" y="152" width="168" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="336" y="152" width="168" height="72" rx="8" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<rect x="346" y="160" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="363" y="169" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-03</text>
+<rect x="386" y="160" width="50" height="12" rx="2" fill="#059669"/><text x="411" y="169" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="420" y="196" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Reservada</text>
+<text x="420" y="213" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">restricción de unicidad</text>
+<rect x="600" y="152" width="168" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="600" y="152" width="168" height="72" rx="8" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="610" y="160" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="627" y="169" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-03</text>
+<rect x="650" y="160" width="50" height="12" rx="2" fill="#059669"/><text x="675" y="169" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="684" y="196" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Confirmada</text>
+<text x="684" y="213" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">correo enviado</text>
+<rect x="864" y="152" width="168" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="864" y="152" width="168" height="72" rx="8" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="874" y="160" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="891" y="169" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-05</text>
+<rect x="914" y="160" width="44" height="12" rx="2" fill="none" stroke="#5B7065" stroke-width="0.8"/><text x="936" y="169" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="948" y="196" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Recordada</text>
+<text x="948" y="213" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">WhatsApp 24 h antes</text>
+<rect x="560" y="344" width="216" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="560" y="344" width="216" height="72" rx="8" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="570" y="352" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="587" y="361" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">HU-06</text>
+<rect x="610" y="352" width="44" height="12" rx="2" fill="none" stroke="#5B7065" stroke-width="0.8"/><text x="632" y="361" fill="#5B7065" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="668" y="388" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Cancelada o reprogramada</text>
+<text x="668" y="405" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">el paciente usa el enlace</text>
+<rect x="904" y="344" width="160" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="904" y="344" width="160" height="72" rx="8" fill="#dc2626" stroke="#DC2626" stroke-width="1.6" fill-opacity="0.04"/>
+<rect x="914" y="352" width="34" height="12" rx="2" fill="none" stroke="#DC2626" stroke-width="0.8"/><text x="931" y="361" fill="#DC2626" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">FINAL</text>
+<circle cx="1046" cy="360" r="7" fill="none" stroke="#04202C" stroke-width="1.2"/>
+<circle cx="1046" cy="360" r="4" fill="#04202C"/>
+<text x="984" y="388" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Inasistencia</text>
+<text x="984" y="405" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">hoy 25 % · meta &lt; 10 %</text>
+<rect x="1088" y="344" width="160" height="72" rx="8" fill="#F7F8F7"/>
+<rect x="1088" y="344" width="160" height="72" rx="8" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="1098" y="352" width="34" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="1115" y="361" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">FINAL</text>
+<circle cx="1230" cy="360" r="7" fill="none" stroke="#04202C" stroke-width="1.2"/>
+<circle cx="1230" cy="360" r="4" fill="#04202C"/>
+<text x="1168" y="388" fill="#04202C" font-size="13" font-family="'Sora', system-ui, sans-serif" font-weight="600" text-anchor="middle">Asistida</text>
+<text x="1168" y="405" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">horario aprovechado</text>
+<line x1="32" y1="448" x2="1248" y2="448" stroke="#04202c" stroke-width="0.8" stroke-opacity="0.1"/><text x="32" y="476" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<line x1="128" y1="473" x2="156" y2="473" stroke="#059669" stroke-width="1.2" marker-end="url(#estados-cita-arrow-ok)"/>
+<text x="166" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Transición del Sprint 1</text>
+<line x1="330" y1="473" x2="358" y2="473" stroke="#5B7065" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#estados-cita-arrow)"/>
+<text x="368" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Sprints siguientes</text>
+<line x1="504" y1="473" x2="532" y2="473" stroke="#DC2626" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#estados-cita-arrow-err)"/>
+<text x="542" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Reserva rechazada</text>
+<rect x="680" y="464" width="28" height="18" rx="4" fill="#DFE4E0" stroke="#04202C" stroke-width="1.6"/>
+<text x="718" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Punto crítico del sprint</text>
+<circle cx="888" cy="473" r="6" fill="#04202C"/>
+<text x="902" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Inicio</text>
+<circle cx="968" cy="473" r="7" fill="none" stroke="#04202C" stroke-width="1.2"/><circle cx="968" cy="473" r="4" fill="#04202C"/>
+<text x="984" y="477" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Estado final</text>
+<text x="128" y="506" fill="#5B7065" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">Cancelar o reprogramar devuelve el bloque a «Horario libre» para otro paciente. Asistencias e inasistencias alimentan el reporte mensual (HU-07).</text>
+</svg>

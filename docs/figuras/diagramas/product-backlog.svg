@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 624" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="product-backlog-title product-backlog-desc" id="product-backlog-root">
+<title id="product-backlog-title">Mapa del product backlog de AgendaFácil</title>
+<desc id="product-backlog-desc">Mapa de historias del product backlog de AgendaFácil: las 8 historias de usuario ordenadas por actividad y por prioridad (Alta, Media, Baja) con sus puntos; las 3 de prioridad Alta (HU-01, HU-02 y HU-03, 16 de 50 puntos) quedan sobre el corte del sprint.</desc>
+<defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+      #product-backlog-root { --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #04202C;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace; }
+      #product-backlog-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #product-backlog-root .diagram-container { width: 100%; overflow-x: auto; }
+      #product-backlog-root .diagram-container { overflow-x: visible; }</style>
+<marker id="product-backlog-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="product-backlog-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="product-backlog-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+<marker id="product-backlog-arrow-open" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polyline points="0 0, 8 3, 0 6" fill="none" stroke="#5B7065" stroke-width="1.2"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<rect x="24" y="144" width="1232" height="92" rx="6" fill="#059669" fill-opacity="0.06"/>
+<rect x="24" y="256" width="1232" height="164" rx="6" fill="none"/>
+<rect x="24" y="436" width="1232" height="88" rx="6" fill="#04202c" fill-opacity="0.025"/>
+<line x1="372" y1="128" x2="372" y2="524" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" stroke-opacity="0.1"/>
+<line x1="596" y1="128" x2="596" y2="524" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" stroke-opacity="0.1"/>
+<line x1="820" y1="128" x2="820" y2="524" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" stroke-opacity="0.1"/>
+<line x1="1044" y1="128" x2="1044" y2="524" stroke="#04202c" stroke-width="0.8" stroke-dasharray="4,4" stroke-opacity="0.1"/>
+<text x="36" y="164" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">PRIORIDAD</text>
+<text x="36" y="186" fill="#04202C" font-size="18" font-family="'Sora', system-ui, sans-serif" font-weight="600">Alta</text>
+<text x="36" y="202" fill="#304040" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">3 HU · 16 PTS</text>
+<rect x="36" y="210" width="50" height="12" rx="2" fill="#059669"/><text x="61" y="219" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">SPRINT 1</text>
+<text x="36" y="276" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">PRIORIDAD</text>
+<text x="36" y="298" fill="#04202C" font-size="18" font-family="'Sora', system-ui, sans-serif" font-weight="600">Media</text>
+<text x="36" y="314" fill="#304040" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">3 HU · 18 PTS</text>
+<text x="36" y="456" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">PRIORIDAD</text>
+<text x="36" y="478" fill="#04202C" font-size="18" font-family="'Sora', system-ui, sans-serif" font-weight="600">Baja</text>
+<text x="36" y="494" fill="#304040" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">2 HU · 16 PTS</text>
+<line x1="24" y1="244" x2="1256" y2="244" stroke="#04202C" stroke-width="1.6"/>
+<rect x="1064" y="248" width="184" height="14" rx="2" fill="#F7F8F7"/>
+<text x="1156" y="258" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.08em">CORTE DEL SPRINT · 16 DE 50 PTS</text>
+<rect x="160" y="64" width="200" height="56" rx="6" fill="#04202c" stroke="#5B7065" stroke-width="1" fill-opacity="0.05"/>
+<text x="172" y="84" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.12em">ACTIVIDAD 1 · PACIENTE</text>
+<text x="172" y="106" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600">Registrarse</text>
+<rect x="384" y="64" width="200" height="56" rx="6" fill="#04202c" stroke="#5B7065" stroke-width="1" fill-opacity="0.05"/>
+<text x="396" y="84" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.12em">ACTIVIDAD 2 · PACIENTE</text>
+<text x="396" y="106" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600">Consultar horarios</text>
+<rect x="608" y="64" width="200" height="56" rx="6" fill="#04202c" stroke="#5B7065" stroke-width="1" fill-opacity="0.05"/>
+<text x="620" y="84" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.12em">ACTIVIDAD 3 · PACIENTE</text>
+<text x="620" y="106" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600">Reservar la cita</text>
+<rect x="832" y="64" width="200" height="56" rx="6" fill="#04202c" stroke="#5B7065" stroke-width="1" fill-opacity="0.05"/>
+<text x="844" y="84" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.12em">ACTIVIDAD 4 · PACIENTE</text>
+<text x="844" y="106" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600">Asistir o reprogramar</text>
+<rect x="1056" y="64" width="200" height="56" rx="6" fill="#04202c" stroke="#5B7065" stroke-width="1" fill-opacity="0.05"/>
+<text x="1068" y="84" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.12em">ACTIVIDAD 5 · CLÍNICA</text>
+<text x="1068" y="106" fill="#04202C" font-size="14" font-family="'Sora', system-ui, sans-serif" font-weight="600">Operar la clínica</text>
+<rect x="160" y="156" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="160" y="156" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202C" stroke-width="1.2"/>
+<rect x="161" y="162" width="3" height="52" rx="1" fill="#059669"/>
+<text x="172" y="177" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Registrarse con nombre,</text>
+<text x="172" y="192" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">teléfono y correo</text>
+<text x="172" y="210" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-01</text>
+<rect x="314" y="201" width="38" height="12" rx="2" fill="#04202C" stroke="#04202C" stroke-width="0.8"/>
+<text x="333" y="210" fill="#FFFFFF" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">3 PTS</text>
+<rect x="384" y="156" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="384" y="156" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202C" stroke-width="1.2"/>
+<rect x="385" y="162" width="3" height="52" rx="1" fill="#059669"/>
+<text x="396" y="177" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Ver horarios libres por</text>
+<text x="396" y="192" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">dentista y día</text>
+<text x="396" y="210" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-02</text>
+<rect x="538" y="201" width="38" height="12" rx="2" fill="#04202C" stroke="#04202C" stroke-width="0.8"/>
+<text x="557" y="210" fill="#FFFFFF" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">5 PTS</text>
+<rect x="608" y="156" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="608" y="156" width="200" height="64" rx="4" fill="#d97706" stroke="#D97706" stroke-width="1.2" stroke-dasharray="4,4" fill-opacity="0.05"/>
+<rect x="609" y="162" width="3" height="52" rx="1" fill="#059669"/>
+<text x="620" y="177" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Reservar cita y recibir</text>
+<text x="620" y="192" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">confirmación por correo</text>
+<text x="620" y="210" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-03</text>
+<rect x="664" y="201" width="40" height="12" rx="2" fill="none" stroke="#D97706" stroke-width="0.8"/><text x="684" y="210" fill="#D97706" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">RIESGO</text>
+<rect x="762" y="201" width="38" height="12" rx="2" fill="#04202C" stroke="#04202C" stroke-width="0.8"/>
+<text x="781" y="210" fill="#FFFFFF" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">8 PTS</text>
+<rect x="1056" y="268" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="1056" y="268" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="1068" y="289" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Panel con la agenda del</text>
+<text x="1068" y="304" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">día de los 3 consultorios</text>
+<text x="1068" y="322" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-04</text>
+<rect x="1210" y="313" width="38" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/>
+<text x="1229" y="322" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">5 PTS</text>
+<rect x="832" y="268" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="832" y="268" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="844" y="289" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Recordatorio por WhatsApp</text>
+<text x="844" y="304" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">24 h antes de la cita</text>
+<text x="844" y="322" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-05</text>
+<rect x="986" y="313" width="38" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/>
+<text x="1005" y="322" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">8 PTS</text>
+<rect x="832" y="344" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="832" y="344" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="844" y="365" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Cancelar o reprogramar</text>
+<text x="844" y="380" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">desde un enlace</text>
+<text x="844" y="398" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-06</text>
+<rect x="986" y="389" width="38" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/>
+<text x="1005" y="398" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">5 PTS</text>
+<rect x="1056" y="448" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="1056" y="448" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="1068" y="469" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Reporte mensual de</text>
+<text x="1068" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">inasistencias</text>
+<text x="1068" y="502" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-07</text>
+<rect x="1210" y="493" width="38" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/>
+<text x="1229" y="502" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">3 PTS</text>
+<rect x="384" y="448" width="200" height="64" rx="4" fill="#F7F8F7"/>
+<rect x="384" y="448" width="200" height="64" rx="4" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="396" y="469" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Asistente conversacional</text>
+<text x="396" y="484" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">de dudas frecuentes</text>
+<text x="396" y="502" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">HU-08</text>
+<rect x="532" y="493" width="44" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/>
+<text x="554" y="502" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="600" text-anchor="middle" letter-spacing="0.06em">13 PTS</text>
+<line x1="32" y1="548" x2="1248" y2="548" stroke="#04202c" stroke-width="0.8" stroke-opacity="0.1"/><text x="32" y="576" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<rect x="128" y="564" width="28" height="18" rx="3" fill="#FFFFFF" stroke="#04202C" stroke-width="1.2"/>
+<rect x="129" y="567" width="3" height="12" rx="1" fill="#059669"/>
+<text x="164" y="577" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Historia seleccionada para el sprint</text>
+<rect x="388" y="564" width="28" height="18" rx="3" fill="#FFFFFF" stroke="#04202c" stroke-width="1" stroke-opacity="0.45"/>
+<text x="424" y="577" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Historia en el product backlog</text>
+<rect x="620" y="564" width="28" height="18" rx="3" fill="#d97706" stroke="#D97706" stroke-width="1.2" stroke-dasharray="4,4" fill-opacity="0.05"/>
+<text x="656" y="577" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Mayor riesgo del sprint</text>
+<line x1="812" y1="573" x2="840" y2="573" stroke="#04202C" stroke-width="1.6"/>
+<text x="848" y="577" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Corte del sprint (capacidad comprometida)</text>
+<text x="128" y="604" fill="#5B7065" font-size="10" font-family="'JetBrains Mono', ui-monospace, monospace">Puntos de historia en serie de Fibonacci (1, 2, 3, 5, 8, 13). Columnas en orden narrativo; filas por prioridad.</text>
+</svg>

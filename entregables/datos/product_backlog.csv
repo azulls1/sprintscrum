@@ -1,0 +1,9 @@
+﻿id,historia,prioridad,puntos,en_sprint
+HU-01,"Como paciente quiero registrarme con mi nombre, teléfono y correo para poder agendar citas.",Alta,3,True
+HU-02,Como paciente quiero ver los horarios disponibles por dentista y día para elegir el que me convenga.,Alta,5,True
+HU-03,Como paciente quiero reservar una cita en un horario libre y recibir confirmación por correo para tener constancia.,Alta,8,True
+HU-04,Como recepcionista quiero ver en un panel la agenda del día de los tres consultorios para organizar la atención.,Media,5,False
+HU-05,Como paciente quiero recibir un recordatorio por WhatsApp 24 horas antes para no olvidar mi cita.,Media,8,False
+HU-06,Como paciente quiero cancelar o reprogramar mi cita desde un enlace para liberar el horario.,Media,5,False
+HU-07,Como administrador quiero un reporte mensual de inasistencias para medir el avance del objetivo.,Baja,3,False
+HU-08,Como paciente quiero un asistente conversacional que responda dudas frecuentes sobre tratamientos y horarios para resolverlas a cualquier hora sin llamar a la clínica.,Baja,13,False

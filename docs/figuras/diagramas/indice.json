@@ -1,0 +1,66 @@
+[
+  {
+    "id": "arquitectura",
+    "titulo": "Arquitectura de despliegue",
+    "descripcion": "Navegador → Traefik v3 (TLS Let's Encrypt) → web nginx :8080 y api FastAPI :8000 → Redis 7 → worker Celery → PostgreSQL 15 de Supabase maestría con RLS, en Docker Swarm de un nodo en el VPS de iAgentek.",
+    "svg": "arquitectura.svg",
+    "png": "arquitectura.png",
+    "html": "arquitectura.html"
+  },
+  {
+    "id": "gantt-sprint",
+    "titulo": "Gantt del sprint de cinco días",
+    "descripcion": "Las 15 tareas del sprint backlog de lunes a viernes, agrupadas por historia (HU-01, HU-02, HU-03) y coloreadas por responsable, con planning, dailies, review y retrospectiva como hitos.",
+    "svg": "gantt-sprint.svg",
+    "png": "gantt-sprint.png",
+    "html": "gantt-sprint.html"
+  },
+  {
+    "id": "product-backlog",
+    "titulo": "Mapa del product backlog",
+    "descripcion": "Las 8 historias de usuario por actividad y prioridad (Alta, Media, Baja) con sus puntos; las 3 de prioridad Alta (16 de 50 puntos) quedan sobre el corte del sprint.",
+    "svg": "product-backlog.svg",
+    "png": "product-backlog.png",
+    "html": "product-backlog.html"
+  },
+  {
+    "id": "equipo-scrum",
+    "titulo": "Equipo Scrum",
+    "descripcion": "Clínica Dental Sonrisa Plena, Nexo Digital Solutions y el equipo 2073 F: product owner, Scrum master con pruebas y dos desarrolladores, con su carga frente a una capacidad de 26 h (Mauricio 23 h, Diego 16 h, Cesar 8 h, Adonai 4 h).",
+    "svg": "equipo-scrum.svg",
+    "png": "equipo-scrum.png",
+    "html": "equipo-scrum.html"
+  },
+  {
+    "id": "secuencia-simulacion",
+    "titulo": "Secuencia de la simulación Monte Carlo",
+    "descripcion": "POST /api/simulacion, inserción en SprintScrum_simulaciones, encolado en Redis, ejecución en el worker Celery y consulta periódica de GET /api/simulacion/{id} hasta que el estado es completada.",
+    "svg": "secuencia-simulacion.svg",
+    "png": "secuencia-simulacion.png",
+    "html": "secuencia-simulacion.html"
+  },
+  {
+    "id": "ciclo-scrum",
+    "titulo": "Ciclo Scrum",
+    "descripcion": "Product backlog, sprint planning, sprint backlog, daily scrum, incremento, sprint review y retrospectiva alrededor del objetivo del sprint, con los datos de este sprint.",
+    "svg": "ciclo-scrum.svg",
+    "png": "ciclo-scrum.png",
+    "html": "ciclo-scrum.html"
+  },
+  {
+    "id": "recorrido-paciente",
+    "titulo": "Recorrido del paciente",
+    "descripcion": "Hoy: llamar o escribir por WhatsApp, esperar y olvidar la cita (25 % de inasistencias). Con AgendaFácil: registrarse (HU-01), ver disponibilidad (HU-02) y reservar con correo (HU-03) en el Sprint 1; recordatorio por WhatsApp (HU-05), cancelar o reprogramar (HU-06) y asistir en sprints siguientes, con la curva de ánimo y la meta de menos de 10 % de inasistencias y 2 h diarias liberadas en recepción.",
+    "svg": "recorrido-paciente.svg",
+    "png": "recorrido-paciente.png",
+    "html": "recorrido-paciente.html"
+  },
+  {
+    "id": "estados-cita",
+    "titulo": "Estados de una cita",
+    "descripcion": "Horario libre → reservada (HU-03, la restricción de unicidad rechaza la doble reserva) → confirmada por correo → recordada (HU-05) → asistida, inasistencia o cancelada o reprogramada (HU-06), que libera el horario; las transiciones del Sprint 1 van en verde.",
+    "svg": "estados-cita.svg",
+    "png": "estados-cita.png",
+    "html": "estados-cita.html"
+  }
+]

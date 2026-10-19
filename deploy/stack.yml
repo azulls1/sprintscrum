@@ -1,0 +1,129 @@
+# Docker Swarm · VPS iaGentek · https://sprintscrum.iagentek.com.mx
+# Redis se nombra «sprintscrum_redis»: en la red compartida iagenteknet el nombre corto «redis» resuelve al de otro stack.
+# Despliegue: deploy/deploy.sh (construye con el sha del commit y exporta TAG).
+version: "3.8"
+
+x-reinicio: &reinicio
+  # "any": un servicio que sale con código 0 también se relanza (con on-failure se queda en 0/1)
+  condition: any
+  delay: 5s
+  window: 60s
+
+services:
+  api:
+    image: sprintscrum-backend:${TAG}
+    environment:
+      - DATABASE_URL_FILE=/run/secrets/sprintscrum_db_dsn
+      - REDIS_URL=redis://sprintscrum_redis:6379/0
+      - REDIS_RESULT_URL=redis://sprintscrum_redis:6379/1
+      - CORS_ORIGINS=https://sprintscrum.iagentek.com.mx
+    secrets: [sprintscrum_db_dsn]
+    volumes: [paquetes:/data/paquetes]
+    networks: [interna, iagenteknet, supabase_maestria]
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 384M, cpus: "1.0" } }
+      update_config: { order: start-first, failure_action: rollback }
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=iagenteknet
+        - traefik.http.routers.sprintscrum-api.rule=Host(`sprintscrum.iagentek.com.mx`) && PathPrefix(`/api`)
+        - traefik.http.routers.sprintscrum-api.entrypoints=websecure
+        - traefik.http.routers.sprintscrum-api.tls.certresolver=letsencryptresolver
+        # Prioridad explícita ALTA: debe ganarle al router del frontend (Host a secas)
+        - traefik.http.routers.sprintscrum-api.priority=100
+        - traefik.http.routers.sprintscrum-api.service=sprintscrum-api
+        - traefik.http.routers.sprintscrum-api.middlewares=sprintscrum-hsts,sprintscrum-cabeceras-api,sprintscrum-limite,sprintscrum-cuerpo
+        # Escrituras (simular, generar ZIP): límite más estricto por IP
+        - traefik.http.routers.sprintscrum-api-escritura.rule=Host(`sprintscrum.iagentek.com.mx`) && PathPrefix(`/api`) && Method(`POST`)
+        - traefik.http.routers.sprintscrum-api-escritura.entrypoints=websecure
+        - traefik.http.routers.sprintscrum-api-escritura.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.sprintscrum-api-escritura.priority=110
+        - traefik.http.routers.sprintscrum-api-escritura.service=sprintscrum-api
+        - traefik.http.routers.sprintscrum-api-escritura.middlewares=sprintscrum-hsts,sprintscrum-cabeceras-api,sprintscrum-limite-escritura,sprintscrum-cuerpo
+        - traefik.http.services.sprintscrum-api.loadbalancer.server.port=8000
+        # Middlewares propios del stack (no se toca la configuración global de Traefik)
+        - traefik.http.middlewares.sprintscrum-hsts.headers.stsSeconds=31536000
+        - traefik.http.middlewares.sprintscrum-hsts.headers.stsIncludeSubdomains=false
+        - traefik.http.middlewares.sprintscrum-cabeceras-api.headers.contentTypeNosniff=true
+        - traefik.http.middlewares.sprintscrum-cabeceras-api.headers.frameDeny=true
+        - traefik.http.middlewares.sprintscrum-cabeceras-api.headers.referrerPolicy=no-referrer
+        - traefik.http.middlewares.sprintscrum-limite.ratelimit.average=20
+        - traefik.http.middlewares.sprintscrum-limite.ratelimit.period=1s
+        - traefik.http.middlewares.sprintscrum-limite.ratelimit.burst=60
+        - traefik.http.middlewares.sprintscrum-limite-escritura.ratelimit.average=20
+        - traefik.http.middlewares.sprintscrum-limite-escritura.ratelimit.period=1m
+        - traefik.http.middlewares.sprintscrum-limite-escritura.ratelimit.burst=10
+        - traefik.http.middlewares.sprintscrum-cuerpo.buffering.maxRequestBodyBytes=8192
+
+  worker:
+    image: sprintscrum-backend:${TAG}
+    command: ["celery", "-A", "app.celery_app", "worker", "--loglevel=INFO", "--concurrency=2", "-n", "sprint@%h"]
+    environment:
+      - DATABASE_URL_FILE=/run/secrets/sprintscrum_db_dsn
+      - REDIS_URL=redis://sprintscrum_redis:6379/0
+      - REDIS_RESULT_URL=redis://sprintscrum_redis:6379/1
+    secrets: [sprintscrum_db_dsn]
+    volumes: [paquetes:/data/paquetes]
+    networks: [interna, supabase_maestria]
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A app.celery_app inspect ping -d sprint@$$HOSTNAME -t 5 | grep -q pong"]
+      interval: 60s
+      timeout: 15s
+      retries: 3
+      start_period: 30s
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 384M, cpus: "1.0" } }
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "64mb", "--maxmemory-policy", "allkeys-lru"]
+    networks: [interna]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 96M } }
+
+  web:
+    image: sprintscrum-frontend:${TAG}
+    networks: [iagenteknet]
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 128M, cpus: "0.5" } }
+      update_config: { order: start-first, failure_action: rollback }
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=iagenteknet
+        - traefik.http.routers.sprintscrum-web.rule=Host(`sprintscrum.iagentek.com.mx`)
+        - traefik.http.routers.sprintscrum-web.entrypoints=websecure
+        - traefik.http.routers.sprintscrum-web.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.sprintscrum-web.priority=10
+        - traefik.http.routers.sprintscrum-web.service=sprintscrum-web
+        - traefik.http.routers.sprintscrum-web.middlewares=sprintscrum-hsts,sprintscrum-limite
+        - traefik.http.services.sprintscrum-web.loadbalancer.server.port=8080
+
+volumes:
+  paquetes:   # ZIP de entregables generados desde la web (compartido por api y worker)
+
+networks:
+  interna:
+    driver: overlay
+  iagenteknet:
+    external: true
+  supabase_maestria:
+    external: true
+    name: supabase_maestria_internal
+
+secrets:
+  sprintscrum_db_dsn:
+    external: true
+    name: sprintscrum_db_dsn_v1
