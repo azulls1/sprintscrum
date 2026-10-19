@@ -19,5 +19,3 @@ frontend/public/figuras
 # Configuración de despliegue con datos del servidor (nunca al repo)
 deploy/.env.deploy
 
-.specify/*
-!.specify/memory/

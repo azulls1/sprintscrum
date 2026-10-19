@@ -24,8 +24,7 @@ python3 scripts/preparar_entregables.py
 
 rsync -az --delete -e "ssh -p $PUERTO -i $LLAVE" \
   --exclude .git --exclude '.venv*' --exclude node_modules --exclude dist --exclude .angular \
-  --exclude .env.deploy --exclude .specify --exclude __pycache__ --exclude .pytest_cache \
-  --exclude-from=.git/info/exclude \
+  --exclude .env.deploy --exclude __pycache__ --exclude .pytest_cache \
   ./ "$VPS:$DESTINO/src/"
 
 "${SSH[@]}" bash -s -- "$TAG" "$DESTINO" "$DOMINIO" "$ARCHIVO_SECRETOS" "$DB_SUPERUSUARIO" "$DB_CONTENEDOR" <<'REMOTO'
