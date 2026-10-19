@@ -2,9 +2,9 @@
 begin;
 delete from public."SprintScrum_entregables";
 insert into public."SprintScrum_entregables" (ruta, nombre, tipo, criterio, detalle, bytes, sha256, orden) values
-    ('documento/Actividad1_Grupal_Equipo2073F.docx', 'Documento de la actividad (Word)', 'Documento', 'Entrega', 'Los seis apartados que pide el enunciado · Calibri 12 · interlineado 1,5', 41640, 'c2fc7312f24976fe83059988a85b8d1248bd9566b560d5e104fde7dfe8309f7a', 0),
-    ('documento/Actividad1_Grupal_Equipo2073F.pdf', 'Documento de la actividad (PDF)', 'PDF', 'Entrega', 'El mismo documento en PDF, listo para leer', 76801, 'e81d5abf32d29a953c407354d439c082614ecff835817c88d55ce2a0775b4f6c', 1),
-    ('documento/Actividad1_Grupal_Equipo2073F_Moodle.zip', 'Entrega para Moodle', 'Paquete', 'Entrega', 'Documento .docx + .pdf y un LEEME que ubica cada criterio de la rúbrica', 114066, 'd5859920885a96c60e9d7ce6215845d44434caf72486fd938bcb47574c051a94', 2),
+    ('documento/Actividad1_Grupal_Equipo2073F.docx', 'Documento de la actividad (Word)', 'Documento', 'Entrega', 'Los seis apartados que pide el enunciado · Calibri 12 · interlineado 1,5', 41859, 'bf0bf472417268617fe1b788302fe939cd2b8991229e2587f7890a03de5e0d51', 0),
+    ('documento/Actividad1_Grupal_Equipo2073F.pdf', 'Documento de la actividad (PDF)', 'PDF', 'Entrega', 'El mismo documento en PDF, listo para leer', 76801, '5a7834c24e4110e54645184269df30a0e8b713ca229977580ad17bbb9e799eaf', 1),
+    ('documento/Actividad1_Grupal_Equipo2073F_Moodle.zip', 'Entrega para Moodle', 'Paquete', 'Entrega', 'Documento .docx + .pdf y un LEEME que ubica cada criterio de la rúbrica', 114279, 'bb1097a02e963d1c8f85f0075618b80d977d83757eaa153f0abb22c18a420a32', 2),
     ('datos/product_backlog.csv', 'Product backlog', 'Datos', 'C2', 'Historias con prioridad y puntos', 1090, '7d99c5e12559d7ad9f25c854149590c647c269abf4f48f451962ac9f3e651edc', 3),
     ('datos/sprint_backlog.csv', 'Sprint backlog', 'Datos', 'C3', 'Tareas con responsable, horas, días del plan y dependencias', 1570, '04abf3fe7544a2ea57519ab1b961e1a1db40e682f4a669e3a8c55ea34d2be5be', 4),
     ('datos/roles.csv', 'Roles Scrum', 'Datos', 'Roles', 'Integrante, rol y responsabilidad', 559, '9f2af8809bd30541a659168e1c05f8ae910dac49bb2a942a933d48dab4dff9a3', 5),
